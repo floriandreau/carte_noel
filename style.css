@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Courgette', cursive;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background: url(img/bg.svg) ;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#close{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 1000;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+h1{
+    background: url(img/joynol.svg) no-repeat;
+    background-position: center;
+    height: 20vh;
+    width: 25vw;
+}
+
+#message{
+    position: absolute;
+    top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+    z-index: 1000;
+    background: white;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.8;
+    padding: 1%;
+}
+
+#leMessage{
+    margin: 5%;
+    color: red;
+}
+
+#lune{
+    background: url(img/lune.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+    top: -50%;
+    left: -30%;
+    width: 57%;
+    height: 120%;
+    z-index: 1;
+    border-radius: 100%;
+}
+#sol{
+    background: url(img/colinne.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+}
+#maison{
+    background: url(img/maison.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        width: 16%;
+        height: 35%;
+        z-index: 2;
+}
+#sapin{
+    background: url(img/sapin.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+        top: 65%;
+        left: 73%;
+        width: 14%;
+        height: 35%;
+        z-index: 3;
+}
+#cadPla{
+    background: url(img/cad-pla.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+    top: 90%;
+    left: 25%;
+    width: 8%;
+    height: 5%;
+    z-index: 3;
+}
+#cadPet{
+    background: url(img/ptit-cad.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+        top: 78%;
+        left: 25%;
+        width: 5%;
+        height: 10%;
+    z-index: 2;
+}
+#cadGro{
+    background: url(img/gros-cad.svg) no-repeat round;
+        background-size: contain;
+        position: absolute;
+        top: 65%;
+        left: 30%;
+        width: 10%;
+        height: 25%;
+    z-index: 2;
+}
+
+/************************ trainal de Noel *******************************/
+
+#noel{
+ position: absolute;
+ width: 50%;
+ height: 30%;
+ z-index: 5;
+ top: 20%;
+ animation: noel 15s linear infinite;
+
+}
+#traino{
+position: absolute;
+background: url(img/traino.svg) no-repeat;
+background-size: cover;
+animation: Traino 3s linear infinite alternate;
+left: 0;
+width: 22%;
+height: 55%;
+z-index: 6;
+}
+#cerfUn{
+    position: absolute;
+    background-size: cover;
+    animation: cerfImpaire 3s linear infinite alternate;
+    left: 22%;
+    width: 22%;
+    height: 55%;
+    z-index: 6;
+}
+#cerfDeux{
+    position: absolute;
+    background-size: cover;
+    animation: cerfPaire 3s linear infinite alternate;
+    left: 45%;
+    width: 22%;
+    height: 55%;
+    z-index: 6;
+}
+#cerfTroi{
+    position: absolute;
+    background-size: cover;
+    animation: cerfImpaire 3s linear infinite alternate;
+    left: 68%;
+    width: 22%;
+    height: 55%;
+    z-index: 6;
+}
+#cerfQuatre{
+    position: absolute;
+    background-size: cover;
+    animation: cerfPaire 3s linear infinite alternate;
+    left: 91%;
+    width: 22%;
+    height: 55%;
+    z-index: 6;
+}
+
+/************************** annimation cerf + trainal **************************/
+
+#pate-avant{
+    animation: moveAvant 3s linear infinite alternate;
+
+}
+
+#pate-arr{
+    animation: moveArr 3s linear infinite alternate;
+
+}
+
+@keyframes moveAvant{
+    from {
+        transform-origin: center;
+        transform: rotate(-10deg);
+    }
+    to{
+        transform-origin: center;
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes moveArr{
+    from {
+        transform-origin: center;
+        transform: rotate(3deg);
+    }
+    to{
+        transform-origin: center;
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes cerfPaire{
+    from {
+        top: -15%;
+    }
+    to{
+        top: 15%;
+    }
+}
+
+@keyframes cerfImpaire{
+    from {
+        top: 15%;
+    }
+    to{
+        top: -15%;
+    }
+}
+
+@keyframes Traino{
+    from {
+        top: -15%;
+        transform: rotate(20deg);
+    }
+    to{
+        top: 15%;
+        transform: rotate(-20deg);
+
+    }
+}
+
+@keyframes noel{
+    from {
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    }
+}
+
+/*************************** Annimation neige ******************************/
+
+.neige{
+    position: absolute;
+    background: url(img/flocon.svg) no-repeat;
+    background-size: contain;
+    z-index: 55;
+}
+
+@keyframes tombeNeige{
+    from {
+        top: -10vh;
+    }
+    to{
+        top: 150vh;
+    }
+}
+
+@keyframes tremble {
+    10%, 90% {
+      transform: translate3d(-1%, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2%, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4%, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4%, 0, 0);
+    }
+  }
+
+/******** taille neige *********/
+.petit{
+    width: 5%;
+    height: 5%;
+}
+
+.moyen{
+    width: 10%;
+    height: 10%;
+}
+
+.grand{
+    width: 20%;
+    height: 20%;
+}
+
+/*************** Vitesse neige ****************************/
+
+.neigeTresLente{
+    animation: tombeNeige 17s linear infinite, tremble 5s linear infinite alternate;
+
+}
+
+.neigeLente{
+    animation: tombeNeige 15s linear infinite, tremble 5s linear infinite alternate;
+
+}
+.neigeMoyenLent{
+    animation: tombeNeige 12s linear infinite, tremble 5s linear infinite alternate;
+
+}
+.neigeMoyenne{
+    animation: tombeNeige 8s linear infinite, tremble 5s linear infinite alternate;
+
+}
+.neigeMoyenneRapide{
+    animation: tombeNeige 5s linear infinite, tremble 5s linear infinite alternate;
+
+}
+.neigeRapide{
+    animation: tombeNeige 3s linear infinite, tremble 5s linear infinite alternate;
+
+}
+
+/******************** hover Lune**********************/
+
+#lune:hover{
+    animation: tourne 3s linear infinite, disco 1s linear infinite alternate;;
+}
+
+@keyframes tourne{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/******************** clic sapin**********************/
+
+#sapin{
+    transform-origin: bottom;
+
+}
+
+.secouage{
+    animation: secoue 0.3s linear infinite;
+
+}
+
+@keyframes secoue{
+    from {
+        transform: rotate(-5deg);
+    }
+    to{
+        transform: rotate(5deg);
+    }
+}
+
+/************************** effet lumière lune ************************/
+
+#lune{
+    animation: disco 1s linear infinite alternate;
+
+}
+
+@keyframes disco{
+    from {
+        box-shadow:
+      inset 0 0 50px #fff,      /* blanc (intérieur)*/
+      inset 20px 0 80px #f0f,   /* petite couche de magenta (intérieur) */
+      inset -20px 0 80px #0ff,  /* petite couche de cyan (intérieur) */
+      inset 20px 0 300px #f0f,  /* grosse couche de magenta (intérieur) */ 
+      inset -20px 0 300px #0ff, /* grosse couche de cyan (intérieur) */
+      0 0 50px #fff,            /* blanc (extrérieur) */
+      -10px 0 80px #f0f,        /* magenta (extérieur) */    
+      10px 0 80px #0ff;         /* cyan (extérieur) */
+    }
+    to{
+        box-shadow:
+      inset 0 0 50px #fff,      
+      inset 20px 0 80px #0ff,
+      inset -20px 0 80px #f0f,  
+      inset 20px 0 300px #0ff,  
+      inset -20px 0 300px #f0f, 
+      0 0 50px #fff,
+      -10px 0 80px #0ff,            
+      10px 0 80px #f0f;         
+    }
+}
